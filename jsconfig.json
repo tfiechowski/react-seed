@@ -1,0 +1,13 @@
+// jsconfig.json
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "baseUrl": "./src",
+    "paths": {
+      "components/*": ["src/components/*", "src/components/*/index.js"],
+      "contexts": ["src/contexts/*", "src/contexts/*/index.js"],
+      "page/*": ["src/page/*"],
+    }
+  },
+  "include": ["src/**/*"]
+}
