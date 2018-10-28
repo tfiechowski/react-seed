@@ -2,13 +2,12 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import Button from 'components/Button';
+
 import ColorCard from './ColorCard';
 
 const Wrapper = styled.div`
   padding: 10px;
-
-  display: flex;
-  flex-direction: column;
 `;
 
 export class ColorList extends Component {
@@ -34,7 +33,9 @@ export class ColorList extends Component {
         {this.state.loading ? (
           <div>Loading...</div>
         ) : (
-          <button onClick={this.handleFetchColors}>Fetch more colors!</button>
+          <Button onClick={this.handleFetchColors}>
+            <span>Fetch more colors!</span>
+          </Button>
         )}
       </Wrapper>
     );
